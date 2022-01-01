@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://score.piratemedia.com/theme.schema.json",
+  "type": "object",
+  "title": "Theme",
+  "description": "domain theme",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Domain ID",
+      "type": "number"
+    },
+    "mainColor": {
+      "description": "main color for accenting buttons etc",
+      "type": "string"
+    },
+    "accentColor": {
+      "description": "secondary color for accenting titles etc",
+      "type": "string"
+    },
+    "dark": {
+      "description": "should we use the dark mode?",
+      "type": "boolean"
+    },
+    "backgroundImage": {
+      "description": "url to an image to use for the application background",
+      "type": "string"
+    },
+    "backgroundPosition": {
+      "description": "background positioning within the application frame",
+      "type": "string",
+      "enum": [
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "middle"
+      ]
+    },
+    "translucentCards": {
+      "description": "make the cards translucent in the main application",
+      "type": "boolean"
+    },
+    "font": {
+      "description": "the name of a Google Web font which we will load for the UI",
+      "type": "string"
+    },
+    "titleSize": {
+      "description": "size of title text",
+      "type": "number"
+    }
+  }
+}

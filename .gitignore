@@ -1,0 +1,5 @@
+dist
+.build_cache
+node_modules
+.score_db.json
+.idea

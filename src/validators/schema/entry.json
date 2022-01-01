@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://score.piratemedia.com/entry.schema.json",
+  "type": "object",
+  "title": "Entry",
+  "description": "score entry for the score app",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Entity ID",
+      "type": "number"
+    },
+    "name": {
+      "description": "The entry's name",
+      "type": "string"
+    },
+    "description": {
+      "description": "a description of the entry",
+      "type": "string"
+    },
+    "index": {
+      "description": "the position that the entry should show in",
+      "type": "number"
+    },
+    "team": {
+      "description": "optional team name for the entry",
+      "type": "string"
+    },
+    "domain": {
+      "description": "domain to which this entity belongs",
+      "type": "number"
+    },
+    "owner": {
+      "description": "the ID of the owning User",
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "domain",
+    "owner"
+  ]
+}

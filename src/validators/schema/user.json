@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://score.piratemedia.com/user.schema.json",
+  "type": "object",
+  "title": "User",
+  "description": "user for the score app",
+  "properties": {
+    "id": {
+      "description": "User ID",
+      "type": "number"
+    },
+    "name": {
+      "description": "The users name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

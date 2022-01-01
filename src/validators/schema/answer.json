@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://score.piratemedia.com/answer.schema.json",
+  "type": "object",
+  "title": "Answer",
+  "description": "user for the score app",
+  "additionalProperties": false,
+  "properties": {
+    "value": {
+      "description": "answer value",
+      "type": "number"
+    },
+    "user": {
+      "description": "The users ID",
+      "type": "number"
+    },
+    "entry": {
+      "description": "The entry ID",
+      "type": "number"
+    },
+    "rank": {
+      "description": "the rank index for which this answer should be attributed",
+      "type": "number"
+    }
+  },
+  "required": [
+    "value",
+    "user",
+    "entry",
+    "rank"
+  ]
+}

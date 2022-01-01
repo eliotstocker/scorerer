@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://score.piratemedia.com/domain.schema.json",
+  "type": "object",
+  "title": "Domain",
+  "description": "question entity domain",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Domain ID",
+      "type": "number"
+    },
+    "name": {
+      "description": "The name for the domain",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of Domain",
+      "type": "string"
+    },
+    "identifier": {
+      "description": "logical identifier for domain",
+      "type": "string"
+    },
+    "allowUserEntries": {
+      "description": "enable users to add entries",
+      "type": "boolean",
+      "default": true
+    },
+    "showResults": {
+      "description": "simple toggle to allow users to see results",
+      "type": "boolean",
+      "default": false
+    },
+    "scoreOwnEntry": {
+      "description": "users can score their own entries",
+      "type": "boolean",
+      "default": false
+    },
+    "disableScoring": {
+      "description": "stop users from submitting scores",
+      "type": "boolean",
+      "default": false
+    },
+    "theme": {
+      "description": "optional theme id to use for rendering the app",
+      "type": "number"
+    },
+    "ranks": {
+      "description": "Ranks that will be scored against each entity",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Rank Name",
+            "type": "string"
+          },
+          "min": {
+            "description": "Minimum selectable value",
+            "type": "number"
+          },
+          "max": {
+            "description": "Maximum selectable value",
+            "type": "number"
+          }
+        },
+        "required": [
+          "name",
+          "min",
+          "max"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "ranks"
+  ]
+}
